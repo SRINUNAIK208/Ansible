@@ -1,6 +1,6 @@
 - name: files varible
   hosts: local
-  connections: local 
+  connection: local 
   vars_files:
   - course.yaml
   tasks:
