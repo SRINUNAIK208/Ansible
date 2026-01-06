@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-   Number: 17
+   Number: 19
   tasks:
   - name: checking the age is greater than number
     when: Number > 18
