@@ -1,0 +1,17 @@
+- name: checking condition
+  hosts: local
+  connection: local
+  vars:
+   Number: 17
+  tasks:
+  - name: checking the age is greater than number
+    when: Number > 18
+    ansible.builtin.debug:
+     msg: " eigible for voting"
+  
+  - name: checking the age i less than number
+    when: Number < 18
+    ansible.builtin.debug:
+     msg: " not eigible for voting"
+
+
