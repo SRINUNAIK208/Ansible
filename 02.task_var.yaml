@@ -6,6 +6,6 @@
     vars:
      Greeting: Hello i am from task variable"
     ansible.builtin.debug:
-     msg: "{{ Greeting }}""
+     msg: "{{ Greeting }}"
     
   
