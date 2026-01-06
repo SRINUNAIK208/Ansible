@@ -6,4 +6,4 @@
   tasks:
   - name: print the files varibles
     ansible.builtin.debug:
-     msg: "i am leaning {{ Couser }}, Duration of the course is {{ Duration }} and trainer is {{ Trainer }}"
+     msg: "i am leaning {{ Course }}, Duration of the course is {{ Duration }} and trainer is {{ Trainer }}"
