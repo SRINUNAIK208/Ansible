@@ -4,7 +4,7 @@
   tasks:
   - name: running task varible
     vars:
-     Greeting: Hello i am from task variable"
+     Greeting: Hello i am from task variable
     ansible.builtin.debug:
      msg: "{{ Greeting }}"
     
