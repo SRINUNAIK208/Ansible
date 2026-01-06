@@ -1,0 +1,11 @@
+- name: task varible
+  hosts: local
+  connection: local
+  tasks:
+  - name: running task varible
+    vars:
+     Greeting: Hello i am from task variable"
+    ansible.builtin.debug:
+     msg: {{ Greeting }}
+    
+  
