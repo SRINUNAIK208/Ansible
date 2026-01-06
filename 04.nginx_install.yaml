@@ -1,4 +1,5 @@
 - name: nginx
+  become: yes
   hosts: local
   connection: local
   tasks:
