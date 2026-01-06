@@ -1,11 +1,22 @@
-- name: task varible
+- name: playbook variable
   hosts: local
   connection: local
+  vars:
+   Couser: Devops with Aws
+   Duration: 180hr
+   Trainer: sivakumar
   tasks:
-  - name: running task varible
+  - name: print the varibles
     vars:
-     Greeting: Hello i am from task variable
+     Couser: ansible
     ansible.builtin.debug:
-     msg: "{{ Greeting }}"
+     msg: "i am leaning {{ Couser }}, Duration of the course is {{ Duration }} and trainer is {{ Trainer }}"
+
+  - name: print the varibles
+    ansible.builtin.debug:
+     msg: "i am leaning {{ Couser }}, Duration of the course is {{ Duration }} and trainer is {{ Trainer }}"
+-
+  
+  
     
   
