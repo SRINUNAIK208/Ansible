@@ -15,7 +15,7 @@
   - name: print the varibles
     ansible.builtin.debug:
      msg: "i am leaning {{ Couser }}, Duration of the course is {{ Duration }} and trainer is {{ Trainer }}"
--
+
   
   
     
