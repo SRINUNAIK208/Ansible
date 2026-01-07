@@ -1,0 +1,15 @@
+- name: playbook control using ansible
+  hosts: node
+  become: yes
+  tasks:
+  - name: installing nginx
+    ansible.builtin.dnf:
+     name: naginx
+     state: present
+    when: ansible_os_family == "RedHat"
+  
+  - name: installing nginx
+    ansible.builtin.apt:
+     name: naginx
+     state: present
+    when: ansible_os_family == "Debian"
