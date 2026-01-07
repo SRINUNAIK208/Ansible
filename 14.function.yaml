@@ -1,7 +1,33 @@
 - name: function
   hosts: local
   connection: local
+  vars:
+   person: suresh,ramesh,mahesh,naresh
   tasks:
   - name: checking function
     ansible.builtin.debug:
      msg: "Hello, {{ person | default('suresh') }}"
+  
+  - name: print the varibles
+    ansible.builtin.debug:
+     msg: "Hello, {{ person }}"
+  
+  - name: convert map to list
+    vars:
+     course details:
+      Course: Devops
+      Duration: 180hr
+      Trainer: sivakumar
+    ansible.builtin.debug:
+     msg: "course info, {{ course details | dict2items }}"
+
+  - name: convert list to map
+    vars:
+     course datails:
+      - {'key': 'name', 'value': 'ansible'}
+      - {'key': 'duration', 'value': '10hr'}
+      - {'key': 'tainer', 'value': 'sivakumar'}
+    ansible.builtin.debug:
+     msg: "course info, {{ course details || items2dict }}"
+
+     
