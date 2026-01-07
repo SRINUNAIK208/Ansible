@@ -4,4 +4,4 @@
   tasks:
   - name: checking function
     ansible.builtin.debug:
-     msg: "Hello, {{ person | defuilt('suresh') }}"
+     msg: "Hello, {{ person | default('suresh') }}"
