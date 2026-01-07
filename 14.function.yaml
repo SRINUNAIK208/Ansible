@@ -1,0 +1,7 @@
+- name: function
+  hosts: local
+  connection: local
+  tasks:
+  - name: checking function
+    ansible.builtin.debug:
+     msg: "Hello, {{ person | defuilt('suresh') }}"
