@@ -2,9 +2,9 @@
   hosts: node
   become: yes
   tasks:
-  -  names: packages
+  -  name: packages
      ansible.builtin.package:
-      names: "{{ item }}"
+      name: "{{ item }}"
       state: present
      loop:
      - mysql
