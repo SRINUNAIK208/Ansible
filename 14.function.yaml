@@ -14,20 +14,20 @@
   
   - name: convert map to list
     vars:
-     course details:
+     course_details:
       Course: Devops
       Duration: 180hr
       Trainer: sivakumar
     ansible.builtin.debug:
-     msg: "course info, {{ course details | dict2items }}"
+     msg: "course info, {{ course_details | dict2items }}"
 
   - name: convert list to map
     vars:
-     course datails:
-      - {'key': 'name', 'value': 'ansible'}
-      - {'key': 'duration', 'value': '10hr'}
-      - {'key': 'tainer', 'value': 'sivakumar'}
+     course_details:
+     - {'key': 'name', 'value': 'ansible'}
+     - {'key': 'duration', 'value': '10hr'}
+     - {'key': 'tainer', 'value': 'sivakumar'}
     ansible.builtin.debug:
-     msg: "course info, {{ course details || items2dict }}"
+     msg: "course info, {{ course_details || items2dict }}"
 
      
